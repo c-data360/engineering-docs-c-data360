@@ -1,9 +1,13 @@
 import Link from "next/link";
 import { BookOpen } from "lucide-react";
+import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { GitHub } from "@/components/icons/github";
 import { LangSwitcher } from "@/components/lang-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
+
+const githubUrl = process.env.NEXT_PUBLIC_GITHUB_URL ?? "https://github.com";
+const logoUrl = process.env.NEXT_PUBLIC_LOGO_URL ?? "";
 
 export function Navbar() {
   const t = useTranslations("nav");
@@ -14,7 +18,11 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto flex h-14 items-center justify-between px-6">
         <div className="flex items-center gap-6">
           <Link href={`/${locale}`} className="flex items-center gap-2 font-semibold text-foreground">
-            <BookOpen className="size-5 text-primary" />
+            {logoUrl ? (
+              <Image src={logoUrl} alt="Logo" width={20} height={20} className="size-5" />
+            ) : (
+              <BookOpen className="size-5 text-primary" />
+            )}
             <span className="hidden sm:inline text-sm">Engineering Docs</span>
           </Link>
           <nav className="hidden md:flex items-center gap-4 text-sm text-muted-foreground">
@@ -27,7 +35,7 @@ export function Navbar() {
           <LangSwitcher />
           <ThemeToggle />
           <Link
-            href="https://github.com/segalg"
+            href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center size-8 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"

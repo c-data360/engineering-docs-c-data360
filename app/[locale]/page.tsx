@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { GitHub } from "@/components/icons/github";
 import { BookOpen } from "lucide-react";
 
+const githubUrl = process.env.NEXT_PUBLIC_GITHUB_URL ?? "https://github.com";
+
 export default function HomePage() {
   const t = useTranslations("hero");
   const locale = useLocale();
@@ -36,7 +38,7 @@ export default function HomePage() {
             {t("cta")}
           </Link>
           <a
-            href="https://github.com/c-data360"
+            href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 justify-center rounded-lg border border-border px-5 py-2.5 text-sm font-medium hover:bg-accent hover:border-primary/30 transition-colors"
