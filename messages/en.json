@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Home",
+    "docs": "Documentation"
+  },
+  "sidebar": {
+    "gettingStarted": "Getting started",
+    "onboarding": "Onboarding",
+    "engineering": "Engineering standards",
+    "gitflow": "GitFlow",
+    "commits": "Commit conventions",
+    "pr": "Pull Request process",
+    "changesets": "Changesets"
+  },
+  "hero": {
+    "badge": "Internal engineering docs",
+    "title": "Engineering Hub",
+    "subtitle": "Conventions, guides and processes for the engineering team.",
+    "cta": "Read the docs",
+    "github": "View on GitHub"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "contact": "For more information:"
+  }
+}

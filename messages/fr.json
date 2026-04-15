@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "docs": "Documentation"
+  },
+  "sidebar": {
+    "gettingStarted": "Pour commencer",
+    "onboarding": "Onboarding",
+    "engineering": "Standards d'ingénierie",
+    "gitflow": "GitFlow",
+    "commits": "Conventions de commits",
+    "pr": "Process de Pull Request",
+    "changesets": "Changesets"
+  },
+  "hero": {
+    "badge": "Documentation technique interne",
+    "title": "Hub d'ingénierie",
+    "subtitle": "Conventions, guides et processus pour l'équipe technique.",
+    "cta": "Lire la documentation",
+    "github": "Voir sur GitHub"
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "contact": "Pour plus d'informations :"
+  }
+}
