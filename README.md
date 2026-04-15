@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Engineering Docs
+
+A clean, bilingual (FR/EN) internal documentation site built with Next.js. Designed to be reusable - adapt it to any team or company by editing the markdown files and a few config values.
+
+## Stack
+
+- **[Next.js 16](https://nextjs.org)** - App Router, Turbopack
+- **[next-intl](https://next-intl-docs.vercel.app)** - FR/EN routing & translations
+- **[next-themes](https://github.com/pacocoursey/next-themes)** - Dark / light mode
+- **[MDX](https://mdxjs.com)** + **[rehype-pretty-code](https://rehype-pretty-code.netlify.app)** - Syntax-highlighted code blocks
+- **[Tailwind CSS v4](https://tailwindcss.com)** + **[shadcn/ui](https://ui.shadcn.com)** - Styling & components
+- **[remark-gfm](https://github.com/remarkjs/remark-gfm)** - GitHub Flavored Markdown (tables, strikethrough…)
+
+## Features
+
+- Bilingual routing (`/fr/...` and `/en/...`) with a custom language switcher
+- Dark / light mode with system preference detection
+- Sidebar navigation with active link highlighting
+- macOS-style code blocks with syntax highlighting (Shiki)
+- shadcn `Table` component for clean data tables
+- Fully typed with TypeScript
+
+## Project Structure
+
+```
+app/
+  [locale]/
+    docs/[slug]/   ← doc pages (reads .md files)
+    page.tsx       ← home / hero
+components/        ← navbar, sidebar, footer, lang-switcher…
+lib/
+  get-doc.ts       ← MDX compiler + rehype pipeline
+  mdx-components.tsx ← custom MDX component overrides
+messages/
+  fr.json          ← French translations
+  en.json          ← English translations
+.github/docs/
+  fr/              ← French markdown doc files
+  en/              ← English markdown doc files
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Adding / Editing Docs
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Add a `.md` file in `.github/docs/fr/` and `.github/docs/en/`
+2. Add the slug mapping in `lib/get-doc.ts` (`SLUG_MAP`) if the filename differs from the URL slug
+3. Add the nav entry in `components/sidebar.tsx` and translations in `messages/*.json`
 
-## Learn More
+> **Note:** The doc files live outside the Next.js project root. After editing them, restart the dev server for changes to appear (Turbopack does not watch them).
 
-To learn more about Next.js, take a look at the following resources:
+## Customisation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| What                   | Where                                             |
+| ---------------------- | ------------------------------------------------- |
+| Site name & nav labels | `messages/fr.json` + `messages/en.json`           |
+| Logo / brand icon      | `components/navbar.tsx` + `components/footer.tsx` |
+| Contact email          | `components/footer.tsx`                           |
+| Brand colors           | `app/globals.css` (`--primary` variable)          |
+| Supported locales      | `i18n/routing.ts`                                 |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Branches
 
-## Deploy on Vercel
+| Branch      | Description                                             |
+| ----------- | ------------------------------------------------------- |
+| `main`      | Generic, brand-agnostic version                         |
+| `c-data360` | Company-specific version (private logos, company email) |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Segal G.** - [segal-portfolio.vercel.app](https://segal-portfolio.vercel.app) · [segal.gbenou26@gmail.com](mailto:segal.gbenou26@gmail.com)

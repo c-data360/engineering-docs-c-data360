@@ -149,7 +149,7 @@
 }
 
 /* rehype-pretty-code wraps every code block in <figure data-rehype-pretty-code-figure>.
-   display:contents makes it a transparent passthrough — no box, no margin, no background. */
+   display:contents makes it a transparent passthrough - no box, no margin, no background. */
 figure[data-rehype-pretty-code-figure] {
   display: contents;
 }

@@ -18,7 +18,7 @@ function Pre({
   "data-language"?: string;
   "data-theme"?: string;
 }) {
-  // Never apply shiki's background — the terminal wrapper controls the background
+  // Never apply shiki's background - the terminal wrapper controls the background
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { style: _ignoredStyle, ...restProps } = props as React.ComponentProps<"pre"> & { style?: unknown };
 
@@ -49,7 +49,7 @@ function Pre({
 
 export const mdxComponents: MDXComponents = {
   // Strip the <figure> wrapper that rehype-pretty-code injects around every code block.
-  // Without this, it renders as a styled box around our terminal — creating the inner rectangle.
+  // Without this, it renders as a styled box around our terminal - creating the inner rectangle.
   figure: ({ children, ...props }) => {
     const isCodeFigure = "data-rehype-pretty-code-figure" in props;
     if (isCodeFigure) return <>{children}</>;
