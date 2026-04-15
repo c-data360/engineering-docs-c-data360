@@ -1,3 +1,4 @@
+import { BookOpen } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export function Footer() {
@@ -6,27 +7,16 @@ export function Footer() {
     <footer className="border-t border-border py-5 mt-16">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between text-xs text-muted-foreground">
         <div className="flex items-center gap-3">
-          <img
-            src="/logo-black.webp"
-            alt="Logo"
-            className="dark:hidden opacity-70"
-            style={{ height: "24px", width: "auto" }}
-          />
-          <img
-            src="/logo-white.webp"
-            alt="Logo"
-            className="hidden dark:block opacity-60"
-            style={{ height: "24px", width: "auto" }}
-          />
+          <BookOpen className="size-4 text-muted-foreground/70" />
           <span className="hidden sm:inline">{t("rights")}</span>
         </div>
         <p className="text-pretty transition-colors">
           {t("contact")}{" "}
           <a
-            href="mailto:segal.gbenou@c-data360.ai"
+            href="mailto:segal.gbenou26@gmail.com"
             className="text-primary underline underline-offset-4"
           >
-            segal.gbenou@c-data360.ai
+            segal.gbenou26@gmail.com
           </a>
         </p>
       </div>
