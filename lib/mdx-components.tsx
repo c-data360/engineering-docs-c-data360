@@ -7,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "@/components/ui/shadcn/table";
 
 // macOS-style terminal code block
 function Pre({

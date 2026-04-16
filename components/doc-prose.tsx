@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CodeBlock as AceCodeBlock } from "@/components/ui/code-block";
+import { CodeBlock as AceCodeBlock } from "@/components/ui/shadcn/code-block";
 import {
   Table,
   TableBody,
@@ -7,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "@/components/ui/shadcn/table";
 
 type Children = { children: React.ReactNode };
 

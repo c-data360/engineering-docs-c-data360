@@ -1,6 +1,6 @@
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/shadcn/badge";
 import { GitHub } from "@/components/icons/github";
 import { BookOpen } from "lucide-react";
 

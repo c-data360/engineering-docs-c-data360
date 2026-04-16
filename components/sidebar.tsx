@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/components/ui/shadcn/separator";
 
 export function Sidebar() {
   const t = useTranslations("sidebar");
