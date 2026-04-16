@@ -66,13 +66,6 @@ Open [http://localhost:3000](http://localhost:3000).
 | Brand colors           | `app/globals.css` (`--primary` variable)          |
 | Supported locales      | `i18n/routing.ts`                                 |
 
-## Branches
-
-| Branch      | Description                                             |
-| ----------- | ------------------------------------------------------- |
-| `main`      | Generic, brand-agnostic version                         |
-| `c-data360` | Company-specific version (private logos, company email) |
-
 ## Author
 
-**Segal G.** - [segal-portfolio.vercel.app](https://segal-portfolio.vercel.app) · [segal.gbenou26@gmail.com](mailto:segal.gbenou26@gmail.com)
+**Segal G.** - [segal-portfolio.vercel.app](https://segal-portfolio.vercel.app)
