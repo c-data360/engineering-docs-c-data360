@@ -16,16 +16,14 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto flex h-16 items-center justify-between px-6">
         <div className="flex items-center gap-3">
           <Link href={`/${locale}`} className="flex items-center font-semibold text-foreground">
-            <div className="relative h-14 w-[200px] flex-shrink-0">
-              <Image
-                src="/logo-black.webp"
-                alt="Logo"
-                fill
-                sizes="200px"
-                className="object-contain object-left dark:brightness-0 dark:invert"
-                priority
-              />
-            </div>
+            <Image
+              src="/logo-black.webp"
+              alt="Logo"
+              width={88}
+              height={40}
+              className="dark:brightness-0 dark:invert"
+              priority
+            />
           </Link>
           <nav className="hidden md:flex items-center gap-4 text-sm text-muted-foreground">
             <Link href={`/${locale}/docs/onboarding`} className="hover:text-foreground transition-colors">

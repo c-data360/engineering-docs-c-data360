@@ -9,15 +9,13 @@ export function Footer() {
     <footer className="border-t border-border py-6">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between text-xs text-muted-foreground">
         <div className="flex items-center gap-3">
-          <div className="relative h-12 w-[170px] flex-shrink-0">
-            <Image
-              src="/logo-black.webp"
-              alt="Logo"
-              fill
-              sizes="170px"
-              className="object-contain object-left dark:brightness-0 dark:invert"
-            />
-          </div>
+          <Image
+            src="/logo-black.webp"
+            alt="Logo"
+            width={75}
+            height={34}
+            className="dark:brightness-0 dark:invert"
+          />
           <span className="hidden sm:inline">{t("rights")}</span>
         </div>
         <p className="text-pretty transition-colors">
