@@ -29,7 +29,7 @@ export default function HomePage() {
         <p className="text-lg text-muted-foreground max-w-xl mx-auto text-pretty">
           {t("subtitle")}
         </p>
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <Link
             href={`/${locale}/docs/onboarding`}
             className="inline-flex items-center gap-2 justify-center rounded-lg bg-primary text-primary-foreground px-5 py-2.5 text-sm font-medium hover:opacity-90 transition-opacity shadow-sm"
