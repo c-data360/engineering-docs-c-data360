@@ -25,19 +25,19 @@ function FrContent({ locale }: { locale: string }) {
       <H2>📚 Documents à lire dans l&apos;ordre</H2>
       <Ol>
         <Li>
-          <A href={`/${locale}/docs/gitflow`}>Notre GitFlow</A> — Comment on
+          <A href={`/${locale}/docs/gitflow`}>Notre GitFlow</A> - Comment on
           gère les branches
         </Li>
         <Li>
-          <A href={`/${locale}/docs/commits`}>Conventions de commits</A> —
+          <A href={`/${locale}/docs/commits`}>Conventions de commits</A> -
           Comment on nomme les commits
         </Li>
         <Li>
-          <A href={`/${locale}/docs/pr`}>Process de Pull Request</A> — Comment
+          <A href={`/${locale}/docs/pr`}>Process de Pull Request</A> - Comment
           on soumet son travail
         </Li>
         <Li>
-          <A href={`/${locale}/docs/changesets`}>Changesets</A> — Comment on
+          <A href={`/${locale}/docs/changesets`}>Changesets</A> - Comment on
           versionne le code et génère les changelogs
         </Li>
       </Ol>
@@ -87,19 +87,19 @@ function EnContent({ locale }: { locale: string }) {
       <H2>📚 Documents to read in order</H2>
       <Ol>
         <Li>
-          <A href={`/${locale}/docs/gitflow`}>Our GitFlow</A> — How we manage
+          <A href={`/${locale}/docs/gitflow`}>Our GitFlow</A> - How we manage
           branches
         </Li>
         <Li>
-          <A href={`/${locale}/docs/commits`}>Commit Conventions</A> — How we
+          <A href={`/${locale}/docs/commits`}>Commit Conventions</A> - How we
           name commits
         </Li>
         <Li>
-          <A href={`/${locale}/docs/pr`}>Pull Request Process</A> — How we
+          <A href={`/${locale}/docs/pr`}>Pull Request Process</A> - How we
           submit our work
         </Li>
         <Li>
-          <A href={`/${locale}/docs/changesets`}>Changesets</A> — How we version
+          <A href={`/${locale}/docs/changesets`}>Changesets</A> - How we version
           code and generate changelogs
         </Li>
       </Ol>

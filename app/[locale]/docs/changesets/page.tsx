@@ -21,7 +21,7 @@ import {
 function FrContent() {
   return (
     <>
-      <H1>📦 Changesets — Versioning &amp; Changelog</H1>
+      <H1>📦 Changesets - Versioning &amp; Changelog</H1>
       <P>
         On utilise{" "}
         <Strong>
@@ -41,7 +41,7 @@ function FrContent() {
       <H2>Principe</H2>
       <P>
         Chaque changement significatif dans le code doit être accompagné
-        d&apos;un <Strong>changeset</Strong> — un petit fichier décrivant la
+        d&apos;un <Strong>changeset</Strong> - un petit fichier décrivant la
         nature du changement (<InlineCode>patch</InlineCode>,{" "}
         <InlineCode>minor</InlineCode>, <InlineCode>major</InlineCode>) et un
         résumé lisible.
@@ -108,13 +108,13 @@ function FrContent() {
       <P>
         Un assistant interactif te demande le ou les packages impactés, le type
         de bump et un résumé. Un fichier est créé dans{" "}
-        <InlineCode>.changeset/</InlineCode> —{" "}
+        <InlineCode>.changeset/</InlineCode> -{" "}
         <Strong>committe-le avec ton code</Strong>.
       </P>
       <CodeBlock lang="bash">{`git add .changeset/
 git commit -m "chore: add changeset for feat(auth)"`}</CodeBlock>
 
-      <H3>2. Lors d&apos;une release — bumper les versions</H3>
+      <H3>2. Lors d&apos;une release - bumper les versions</H3>
       <CodeBlock lang="bash">{`pnpm changeset:version`}</CodeBlock>
       <P>
         Cette commande lit tous les fichiers{" "}
@@ -209,7 +209,7 @@ git commit -m "chore: version packages"`}</CodeBlock>
 function EnContent() {
   return (
     <>
-      <H1>📦 Changesets — Versioning &amp; Changelog</H1>
+      <H1>📦 Changesets - Versioning &amp; Changelog</H1>
       <P>
         We use{" "}
         <Strong>
@@ -228,7 +228,7 @@ function EnContent() {
       <H2>Principle</H2>
       <P>
         Every significant code change must be accompanied by a{" "}
-        <Strong>changeset</Strong> — a small file describing the nature of the
+        <Strong>changeset</Strong> - a small file describing the nature of the
         change (<InlineCode>patch</InlineCode>, <InlineCode>minor</InlineCode>,{" "}
         <InlineCode>major</InlineCode>) and a human-readable summary.
       </P>
@@ -291,13 +291,13 @@ function EnContent() {
       <CodeBlock lang="bash">{`pnpm changeset`}</CodeBlock>
       <P>
         An interactive prompt will ask for the affected packages, bump type, and
-        a summary. A file is created in <InlineCode>.changeset/</InlineCode> —{" "}
+        a summary. A file is created in <InlineCode>.changeset/</InlineCode> -{" "}
         <Strong>commit it with your code</Strong>.
       </P>
       <CodeBlock lang="bash">{`git add .changeset/
 git commit -m "chore: add changeset for feat(auth)"`}</CodeBlock>
 
-      <H3>2. On release — bump versions</H3>
+      <H3>2. On release - bump versions</H3>
       <CodeBlock lang="bash">{`pnpm changeset:version`}</CodeBlock>
       <P>
         This command reads all <InlineCode>.changeset/</InlineCode> files,

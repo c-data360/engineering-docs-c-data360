@@ -162,7 +162,7 @@ git push origin release/v1.2.0
       <H3>Règles de nommage</H3>
       <Ul>
         <Li>
-          ✅ <Strong>En anglais</Strong> — comme les commits et le code
+          ✅ <Strong>En anglais</Strong> - comme les commits et le code
         </Li>
         <Li>✅ Minuscules uniquement</Li>
         <Li>
@@ -323,7 +323,7 @@ git push origin release/v1.2.0
       <H3>Naming rules</H3>
       <Ul>
         <Li>
-          ✅ <Strong>In English</Strong> — like commits and code
+          ✅ <Strong>In English</Strong> - like commits and code
         </Li>
         <Li>✅ Lowercase only</Li>
         <Li>

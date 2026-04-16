@@ -177,7 +177,7 @@ refactor(api): restructuration des routes utilisateur`}</CodeBlock>
           ✅ Description en <Strong>minuscules</Strong>
         </Li>
         <Li>
-          ✅ Description en <Strong>anglais</Strong> — les commits, comme le
+          ✅ Description en <Strong>anglais</Strong> - les commits, comme le
           code, sont en anglais
         </Li>
         <Li>
@@ -373,7 +373,7 @@ refactor(api): restructure user routes`}</CodeBlock>
           ✅ Description in <Strong>lowercase</Strong>
         </Li>
         <Li>
-          ✅ Description in <Strong>English</Strong> — commits, like code, are
+          ✅ Description in <Strong>English</Strong> - commits, like code, are
           in English
         </Li>
         <Li>
