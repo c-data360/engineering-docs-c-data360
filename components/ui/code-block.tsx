@@ -5,6 +5,9 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { IconCheck, IconCopy } from "@tabler/icons-react";
 
+const EMPTY_HIGHLIGHT_LINES: number[] = [];
+const EMPTY_TABS: Array<{ name: string; code: string; language?: string; highlightLines?: number[] }> = [];
+
 type CodeBlockProps = {
   language: string;
   filename: string;
@@ -29,8 +32,8 @@ export const CodeBlock = ({
   language,
   filename,
   code,
-  highlightLines = [],
-  tabs = [],
+  highlightLines = EMPTY_HIGHLIGHT_LINES,
+  tabs = EMPTY_TABS,
 }: CodeBlockProps) => {
   const [copied, setCopied] = React.useState(false);
   const [activeTab, setActiveTab] = React.useState(0);
@@ -61,7 +64,7 @@ export const CodeBlock = ({
           <div className="flex  overflow-x-auto">
             {tabs.map((tab, index) => (
               <button
-                key={index}
+                key={tab.name}
                 onClick={() => setActiveTab(index)}
                 className={`px-3 py-2! text-xs transition-colors font-sans ${
                   activeTab === index

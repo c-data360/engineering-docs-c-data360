@@ -13,6 +13,8 @@ import {
   CodeBlock,
 } from "@/components/doc-prose";
 
+export const metadata = { title: "Onboarding | Engineering Docs" };
+
 function FrContent({ locale }: { locale: string }) {
   return (
     <>

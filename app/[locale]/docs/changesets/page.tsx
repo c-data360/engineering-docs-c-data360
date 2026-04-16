@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   H1,
   H2,
@@ -18,10 +19,11 @@ import {
   TableCell,
 } from "@/components/doc-prose";
 
+export const metadata: Metadata = { title: "Changesets | Engineering Docs" };
+
 function FrContent() {
   return (
     <>
-      <H1>📦 Changesets - Versioning &amp; Changelog</H1>
       <P>
         On utilise{" "}
         <Strong>

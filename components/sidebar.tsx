@@ -30,8 +30,8 @@ export function Sidebar() {
   return (
     <aside className="w-56 shrink-0 hidden md:block border-r border-border">
       <div className="sticky top-4 pt-2 pb-10 space-y-4">
-        {navItems.map((group, i) => (
-          <div key={i}>
+        {navItems.map((group) => (
+          <div key={group.label}>
             <div className="pr-6">
               <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                 {group.label}
@@ -54,7 +54,7 @@ export function Sidebar() {
                 ))}
               </ul>
             </div>
-            {i < navItems.length - 1 && <Separator className="mt-4" />}
+            {navItems.indexOf(group) < navItems.length - 1 && <Separator className="mt-4 -mr-6" />}
           </div>
         ))}
       </div>

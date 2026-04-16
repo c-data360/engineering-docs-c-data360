@@ -31,7 +31,7 @@ export function LangSwitcher() {
 
   function switchLang(newLocale: string) {
     const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
-    window.location.href = newPath;
+    window.location.assign(newPath);
   }
 
   return (

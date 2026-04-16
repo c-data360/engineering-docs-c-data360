@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   H1,
   H2,
@@ -17,10 +18,11 @@ import {
   TableCell,
 } from "@/components/doc-prose";
 
+export const metadata: Metadata = { title: "Commits | Engineering Docs" };
+
 function FrContent() {
   return (
     <>
-      <H1>📝 Conventions de Commits</H1>
       <P>
         On suit le standard{" "}
         <Strong>

@@ -14,6 +14,8 @@ import {
   Blockquote,
 } from "@/components/doc-prose";
 
+export const metadata = { title: "Pull Requests | Engineering Docs" };
+
 function FrContent() {
   return (
     <>

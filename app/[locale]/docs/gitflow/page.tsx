@@ -17,6 +17,8 @@ import {
   TableCell,
 } from "@/components/doc-prose";
 
+export const metadata = { title: "GitFlow | Engineering Docs" };
+
 function FrContent() {
   return (
     <>

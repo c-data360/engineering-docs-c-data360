@@ -100,7 +100,7 @@ export const mdxComponents: MDXComponents = {
     <li className="leading-7 text-pretty">{children}</li>
   ),
   blockquote: ({ children }) => (
-    <blockquote className="my-6 pl-4 py-1 italic text-muted-foreground text-pretty" style={{ borderLeft: "3px solid oklch(0.549 0.244 262.9)", background: "oklch(0.94 0.025 262.9 / 30%)", borderRadius: "0 0.5rem 0.5rem 0", padding: "0.75rem 1rem" }}>
+    <blockquote className="my-6 italic text-muted-foreground text-pretty" style={{ boxShadow: "inset 3px 0 0 oklch(0.549 0.244 262.9 / 0.5)", background: "oklch(0.94 0.025 262.9 / 20%)", borderRadius: "0.25rem", padding: "0.75rem 1rem" }}>
       {children}
     </blockquote>
   ),
