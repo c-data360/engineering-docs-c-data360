@@ -26,7 +26,7 @@ export function H2({ children }: Children) {
   return (
     <h2
       className="text-xl font-semibold mt-10 mb-4 pb-2 text-foreground text-balance"
-      style={{ borderBottom: "2px solid oklch(0.549 0.244 262.9)" }}
+      style={{ borderBottom: "1px solid oklch(0.549 0.244 262.9)" }}
     >
       {children}
     </h2>

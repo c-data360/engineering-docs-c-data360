@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -92,7 +93,7 @@ export const CodeBlock = ({
           margin: 0,
           padding: 0,
           background: "transparent",
-          fontSize: "0.875rem", // text-sm equivalent
+          fontSize: "1rem",
         }}
         wrapLines={true}
         showLineNumbers={true}
