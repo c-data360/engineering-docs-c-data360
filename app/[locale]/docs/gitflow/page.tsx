@@ -23,15 +23,15 @@ function FrContent() {
       <H1>🌿 GitFlow</H1>
 
       <H2>Vue d&apos;ensemble</H2>
-      <CodeBlock>{`main          ← Production. Stable. Sacrée. On n'y touche jamais directement.
+      <CodeBlock>{`main          <- Production. Stable. Sacrée. On n'y touche jamais directement.
 │
-├── hotfix/   ← Correction urgente en production. Créée depuis main.
+├── hotfix/   <- Correction urgente en production. Créée depuis main.
 │
-develop       ← Branche d'intégration. Toujours à jour. Base de tout développement.
+develop       <- Branche d'intégration. Toujours à jour. Base de tout développement.
 │
-├── feature/  ← Nouvelle fonctionnalité. Créée depuis develop.
+├── feature/  <- Nouvelle fonctionnalité. Créée depuis develop.
 │
-└── release/  ← Préparation d'une version. Créée depuis develop.`}</CodeBlock>
+└── release/  <- Préparation d'une version. Créée depuis develop.`}</CodeBlock>
 
       <Hr />
 
@@ -78,7 +78,7 @@ git push origin feature/nom-fonctionnalite`}</CodeBlock>
       </Ul>
 
       <H3>
-        4. Après validation → merge dans <InlineCode>develop</InlineCode> puis
+        4. Après validation -&gt; merge dans <InlineCode>develop</InlineCode> {" "} puis
         supprimer la branche
       </H3>
 
@@ -166,7 +166,7 @@ git push origin release/v1.2.0
         </Li>
         <Li>✅ Minuscules uniquement</Li>
         <Li>
-          ✅ Tirets <InlineCode>-</InlineCode> pour séparer les mots (pas
+          ✅ Tirets <InlineCode>-</InlineCode> {" "} pour séparer les mots (pas
           d&apos;underscore, pas d&apos;espace)
         </Li>
         <Li>✅ Nom court mais descriptif</Li>
@@ -239,7 +239,7 @@ git push origin feature/feature-name`}</CodeBlock>
       </Ul>
 
       <H3>
-        4. After approval → merge into <InlineCode>develop</InlineCode> then
+        4. After approval -&gt; merge into <InlineCode>develop</InlineCode> {" "} then
         delete the branch
       </H3>
 
@@ -327,7 +327,7 @@ git push origin release/v1.2.0
         </Li>
         <Li>✅ Lowercase only</Li>
         <Li>
-          ✅ Hyphens <InlineCode>-</InlineCode> to separate words (no
+          ✅ Hyphens <InlineCode>-</InlineCode> {" "} to separate words (no
           underscores, no spaces)
         </Li>
         <Li>✅ Short but descriptive name</Li>

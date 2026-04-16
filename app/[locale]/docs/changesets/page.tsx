@@ -154,7 +154,7 @@ git commit -m "chore: version packages"`}</CodeBlock>
             </TableCell>
             <TableCell>Bug fix, correction mineure</TableCell>
             <TableCell>
-              <InlineCode>1.2.3</InlineCode> → <InlineCode>1.2.4</InlineCode>
+              <InlineCode>1.2.3</InlineCode> -&gt; <InlineCode>1.2.4</InlineCode>
             </TableCell>
           </TableRow>
           <TableRow>
@@ -163,7 +163,7 @@ git commit -m "chore: version packages"`}</CodeBlock>
             </TableCell>
             <TableCell>Nouvelle fonctionnalité rétrocompatible</TableCell>
             <TableCell>
-              <InlineCode>1.2.3</InlineCode> → <InlineCode>1.3.0</InlineCode>
+              <InlineCode>1.2.3</InlineCode> -&gt; <InlineCode>1.3.0</InlineCode>
             </TableCell>
           </TableRow>
           <TableRow>
@@ -172,7 +172,7 @@ git commit -m "chore: version packages"`}</CodeBlock>
             </TableCell>
             <TableCell>Breaking change</TableCell>
             <TableCell>
-              <InlineCode>1.2.3</InlineCode> → <InlineCode>2.0.0</InlineCode>
+              <InlineCode>1.2.3</InlineCode> -&gt; <InlineCode>2.0.0</InlineCode>
             </TableCell>
           </TableRow>
         </TableBody>
@@ -336,7 +336,7 @@ git commit -m "chore: version packages"`}</CodeBlock>
             </TableCell>
             <TableCell>Bug fix, minor correction</TableCell>
             <TableCell>
-              <InlineCode>1.2.3</InlineCode> → <InlineCode>1.2.4</InlineCode>
+              <InlineCode>1.2.3</InlineCode> -&gt; <InlineCode>1.2.4</InlineCode>
             </TableCell>
           </TableRow>
           <TableRow>
@@ -345,7 +345,7 @@ git commit -m "chore: version packages"`}</CodeBlock>
             </TableCell>
             <TableCell>Backward-compatible new feature</TableCell>
             <TableCell>
-              <InlineCode>1.2.3</InlineCode> → <InlineCode>1.3.0</InlineCode>
+              <InlineCode>1.2.3</InlineCode> -&gt; <InlineCode>1.3.0</InlineCode>
             </TableCell>
           </TableRow>
           <TableRow>
@@ -354,7 +354,7 @@ git commit -m "chore: version packages"`}</CodeBlock>
             </TableCell>
             <TableCell>Breaking change</TableCell>
             <TableCell>
-              <InlineCode>1.2.3</InlineCode> → <InlineCode>2.0.0</InlineCode>
+              <InlineCode>1.2.3</InlineCode> -&gt; <InlineCode>2.0.0</InlineCode>
             </TableCell>
           </TableRow>
         </TableBody>
