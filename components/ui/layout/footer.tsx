@@ -12,8 +12,8 @@ export function Footer() {
           <Image
             src="/logo-black.webp"
             alt="Logo"
-            width={75}
-            height={34}
+            width={66}
+            height={30}
             className="dark:brightness-0 dark:invert"
           />
           <span className="hidden sm:inline">{t("rights")}</span>

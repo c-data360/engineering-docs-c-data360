@@ -19,8 +19,8 @@ export function Navbar() {
             <Image
               src="/logo-black.webp"
               alt="Logo"
-              width={88}
-              height={40}
+              width={77}
+              height={35}
               className="dark:brightness-0 dark:invert"
               priority
             />
