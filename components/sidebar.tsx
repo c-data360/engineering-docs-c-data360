@@ -29,7 +29,7 @@ export function Sidebar() {
 
   return (
     <aside className="w-56 shrink-0 hidden md:block border-r border-border">
-      <div className="sticky top-14 pt-2 pb-10 pr-6 space-y-4">
+      <div className="sticky top-18 pt-2 pb-10 pr-6 space-y-4">
         {navItems.map((group, i) => (
           <div key={i}>
             <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -44,7 +44,7 @@ export function Sidebar() {
                       "block rounded-md px-3 py-1.5 text-sm transition-colors hover:bg-accent hover:text-accent-foreground",
                       pathname === item.href
                         ? "bg-accent text-accent-foreground font-medium"
-                        : "text-muted-foreground"
+                        : "text-muted-foreground",
                     )}
                   >
                     {item.label}

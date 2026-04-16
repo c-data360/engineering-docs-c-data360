@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CodeBlock as AceCodeBlock } from "@/components/ui/code-block";
 import {
   Table,
   TableBody,
@@ -136,22 +137,12 @@ export function InlineCode({ children }: Children) {
 
 export function CodeBlock({ lang, children }: { lang?: string; children: string }) {
   return (
-    <div className="my-6 rounded-lg overflow-hidden border border-border">
-      <div className="flex items-center justify-between px-4 py-2.5 bg-muted border-b border-border">
-        <div className="flex items-center gap-1.5">
-          <span className="size-3 rounded-full bg-[#ff5f57]" />
-          <span className="size-3 rounded-full bg-[#febc2e]" />
-          <span className="size-3 rounded-full bg-[#28c840]" />
-        </div>
-        {lang && (
-          <span className="text-[0.7rem] font-mono font-medium text-muted-foreground/70 uppercase tracking-widest select-none">
-            {lang}
-          </span>
-        )}
-      </div>
-      <pre className="overflow-x-auto px-5 py-5 text-sm leading-6 font-mono m-0 bg-background text-foreground">
-        <code>{children}</code>
-      </pre>
+    <div className="my-6">
+      <AceCodeBlock
+        language={lang ?? "text"}
+        filename={lang ?? ""}
+        code={children}
+      />
     </div>
   );
 }
