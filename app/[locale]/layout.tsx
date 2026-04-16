@@ -53,11 +53,11 @@ export default async function LocaleLayout({
       className={`${fontVariables} h-full`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col antialiased bg-background text-foreground">
+      <body className="h-full flex flex-col antialiased bg-background text-foreground">
         <Providers>
           <NextIntlClientProvider messages={messages}>
             <Navbar />
-            <div className="flex-1">{children}</div>
+            <div className="flex-1 overflow-y-auto overflow-x-hidden">{children}</div>
             <Footer />
           </NextIntlClientProvider>
         </Providers>

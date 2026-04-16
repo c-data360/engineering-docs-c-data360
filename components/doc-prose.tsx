@@ -80,7 +80,7 @@ export function CheckList({ children }: Children) {
 export function CheckItem({ children }: Children) {
   return (
     <li className="leading-7 text-pretty flex items-start gap-2.5 list-none">
-      <span className="mt-1.5 size-3.5 rounded border border-border shrink-0 inline-block" />
+      <span className="mt-1.5 size-4 rounded border border-border shrink-0 inline-block" />
       <span>{children}</span>
     </li>
   );

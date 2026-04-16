@@ -8,7 +8,7 @@ const portfolioUrl = process.env.NEXT_PUBLIC_PORTFOLIO_URL ?? "#";
 export function Footer() {
   const t = useTranslations("footer");
   return (
-    <footer className="border-t border-border py-5 mt-16">
+    <footer className="border-t border-border py-5">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between text-xs text-muted-foreground">
         <div className="flex items-center gap-3">
           {logoUrl ? (
