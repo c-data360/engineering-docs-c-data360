@@ -24,8 +24,7 @@ export async function getDocContent(locale: string, slug: string) {
   const fileName = SLUG_MAP[slug] ?? slug;
   const filePath = path.join(
     process.cwd(),
-    "..",
-    ".github",
+    "content",
     "docs",
     locale,
     `${fileName}.md`
