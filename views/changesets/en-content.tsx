@@ -1,0 +1,200 @@
+import {
+  H1,
+  H2,
+  H3,
+  P,
+  Ul,
+  Li,
+  Hr,
+  Strong,
+  InlineCode,
+  CodeBlock,
+  Blockquote,
+  DocTable,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableHead,
+  TableCell,
+} from "@/components/doc-prose";
+
+export function EnContent() {
+  return (
+    <>
+      <H1>📦 Changesets - Versioning &amp; Changelog</H1>
+      <P>
+        We use{" "}
+        <Strong>
+          <a
+            href="https://github.com/changesets/changesets"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
+          >
+            Changesets
+          </a>
+        </Strong>{" "}
+        to manage semantic versioning and automatic changelog generation.
+      </P>
+
+      <H2>Principle</H2>
+      <P>
+        Every significant code change must be accompanied by a{" "}
+        <Strong>changeset</Strong> - a small file describing the nature of the
+        change (<InlineCode>patch</InlineCode>, <InlineCode>minor</InlineCode>,{" "}
+        <InlineCode>major</InlineCode>) and a human-readable summary.
+      </P>
+      <P>
+        These files accumulate in <InlineCode>.changeset/</InlineCode> across
+        PRs, then are consumed during a release to:
+      </P>
+      <Ul>
+        <Li>Automatically bump the versions of affected packages</Li>
+        <Li>
+          Generate entries in <InlineCode>CHANGELOG.md</InlineCode>
+        </Li>
+      </Ul>
+
+      <Hr />
+
+      <H2>When to create a changeset?</H2>
+      <DocTable>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Situation</TableHead>
+            <TableHead>Changeset?</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableCell>New user-facing feature</TableCell>
+            <TableCell>
+              ✅ <InlineCode>minor</InlineCode>
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Bug fix</TableCell>
+            <TableCell>
+              ✅ <InlineCode>patch</InlineCode>
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Breaking change (API, contract, schema)</TableCell>
+            <TableCell>
+              ✅ <InlineCode>major</InlineCode>
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Internal refactoring, style, docs</TableCell>
+            <TableCell>❌ No</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Dependency updates (no API impact)</TableCell>
+            <TableCell>❌ No</TableCell>
+          </TableRow>
+        </TableBody>
+      </DocTable>
+
+      <Hr />
+
+      <H2>Workflow</H2>
+
+      <H3>1. Create a changeset after your change</H3>
+      <CodeBlock lang="bash">{`pnpm changeset`}</CodeBlock>
+      <P>
+        An interactive prompt will ask for the affected packages, bump type, and
+        a summary. A file is created in <InlineCode>.changeset/</InlineCode> -{" "}
+        <Strong>commit it with your code</Strong>.
+      </P>
+      <CodeBlock lang="bash">{`git add .changeset/
+git commit -m "chore: add changeset for feat(auth)"`}</CodeBlock>
+
+      <H3>2. On release - bump versions</H3>
+      <CodeBlock lang="bash">{`pnpm changeset:version`}</CodeBlock>
+      <P>
+        This command reads all <InlineCode>.changeset/</InlineCode> files,
+        updates <InlineCode>package.json</InlineCode> files, generates{" "}
+        <InlineCode>CHANGELOG.md</InlineCode> entries, and deletes consumed
+        changesets.
+      </P>
+      <CodeBlock lang="bash">{`git add .
+git commit -m "chore: version packages"`}</CodeBlock>
+
+      <H3>3. Publish (if applicable)</H3>
+      <CodeBlock lang="bash">{`pnpm changeset publish`}</CodeBlock>
+      <Blockquote>
+        <p className="mb-0">
+          In this project, releases are automated via GitHub Actions. The
+          workflow automatically creates a release PR whenever it detects
+          unconsumed changesets on <InlineCode>main</InlineCode>.
+        </p>
+      </Blockquote>
+
+      <Hr />
+
+      <H2>Bump types</H2>
+      <DocTable>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Type</TableHead>
+            <TableHead>When</TableHead>
+            <TableHead>Version example</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableCell>
+              <InlineCode>patch</InlineCode>
+            </TableCell>
+            <TableCell>Bug fix, minor correction</TableCell>
+            <TableCell>
+              <InlineCode>1.2.3</InlineCode> -&gt;{" "}
+              <InlineCode>1.2.4</InlineCode>
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>
+              <InlineCode>minor</InlineCode>
+            </TableCell>
+            <TableCell>Backward-compatible new feature</TableCell>
+            <TableCell>
+              <InlineCode>1.2.3</InlineCode> -&gt;{" "}
+              <InlineCode>1.3.0</InlineCode>
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>
+              <InlineCode>major</InlineCode>
+            </TableCell>
+            <TableCell>Breaking change</TableCell>
+            <TableCell>
+              <InlineCode>1.2.3</InlineCode> -&gt;{" "}
+              <InlineCode>2.0.0</InlineCode>
+            </TableCell>
+          </TableRow>
+        </TableBody>
+      </DocTable>
+
+      <Hr />
+
+      <H2>Rules</H2>
+      <Ul>
+        <Li>✅ One changeset per feature or fix (one PR = one changeset)</Li>
+        <Li>
+          ✅ The changeset message is written to be read in a changelog (not
+          like a commit)
+        </Li>
+        <Li>
+          ✅ Commit the <InlineCode>.changeset/</InlineCode> file in the same PR
+          as the code
+        </Li>
+        <Li>
+          ❌ Do not manually bump <InlineCode>package.json</InlineCode> files
+        </Li>
+        <Li>
+          ❌ Do not edit <InlineCode>CHANGELOG.md</InlineCode> files by hand
+        </Li>
+      </Ul>
+    </>
+  );
+}
