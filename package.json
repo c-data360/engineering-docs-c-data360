@@ -4,8 +4,11 @@
   "private": true,
   "author": {
     "name": "Segal G.",
-    "email": "segal.gbenou26@gmail.com",
+    "email": "segal.code@gmail.com",
     "url": "https://segal-portfolio.vercel.app/"
+  },
+  "engines": {
+    "node": "24.x"
   },
   "scripts": {
     "dev": "next dev",
